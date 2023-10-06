@@ -12,8 +12,8 @@ const NewTodo: React.FC<{ onAddTodo: (text: string) => void }> = (props) => {
     if (enteredText.trim().length === 0) {
       return;
     }
-
     props.onAddTodo(enteredText);
+    todoTextInputRef.current!.value = "";
   };
 
   return (
